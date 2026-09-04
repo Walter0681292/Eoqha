@@ -4,8 +4,6 @@ import { ArrowDown, BookOpen, CircleHelp, Sparkles } from 'lucide-react'
 export default function Page() {
   return (
     <main className="relative min-h-screen overflow-hidden px-4 pb-12 text-foreground sm:px-6">
-      <div className="ambient ambient-one" aria-hidden="true" />
-      <div className="ambient ambient-two" aria-hidden="true" />
       <header className="relative z-10 mx-auto flex max-w-5xl items-center justify-between py-6">
         <div className="flex items-center gap-2 text-sm font-semibold text-primary"><BookOpen className="size-4" />Jornada de caráter</div>
         <div className="absolute left-1/2 -translate-x-1/2 font-serif text-xl font-semibold tracking-[0.28em] text-primary sm:text-2xl">ÉOQHÁ</div>

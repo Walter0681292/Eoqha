@@ -42,11 +42,18 @@ export function QuizApp() {
   async function begin() {
     const name = participantName.trim()
     if (!name) return
-    const response = await fetch(`/api/ranking?participantName=${encodeURIComponent(name)}`)
-    const data = await response.json()
-    if (data.exists) { setNameError('Este nome já participou da jornada oficial. Você poderá continuar em modo treino.') ; setOfficial(false) }
-    else setOfficial(true)
     setStarted(true)
+    try {
+      const response = await fetch(`/api/ranking?participantName=${encodeURIComponent(name)}`)
+      if (!response.ok) throw new Error('ranking indisponível')
+      const data = await response.json()
+      if (data.exists) {
+        setNameError('Este nome já participou da jornada oficial. Você poderá continuar em modo treino.')
+        setOfficial(false)
+      } else setOfficial(true)
+    } catch {
+      setOfficial(true)
+    }
   }
 
   function choose(index: number) { if (!answered) { setSelected(index); if (index === question.answer) setScore((value) => value + 1) } }

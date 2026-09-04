@@ -116,43 +116,6 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not(.light) {
-    color-scheme: dark;
-    --background: oklch(0.145 0 0);
-    --foreground: oklch(0.985 0 0);
-    --card: oklch(0.205 0 0);
-    --card-foreground: oklch(0.985 0 0);
-    --popover: oklch(0.205 0 0);
-    --popover-foreground: oklch(0.985 0 0);
-    --primary: oklch(0.922 0 0);
-    --primary-foreground: oklch(0.205 0 0);
-    --secondary: oklch(0.269 0 0);
-    --secondary-foreground: oklch(0.985 0 0);
-    --muted: oklch(0.269 0 0);
-    --muted-foreground: oklch(0.708 0 0);
-    --accent: oklch(0.269 0 0);
-    --accent-foreground: oklch(0.985 0 0);
-    --destructive: oklch(0.704 0.191 22.216);
-    --border: oklch(1 0 0 / 10%);
-    --input: oklch(1 0 0 / 15%);
-    --ring: oklch(0.556 0 0);
-    --chart-1: oklch(0.87 0 0);
-    --chart-2: oklch(0.556 0 0);
-    --chart-3: oklch(0.439 0 0);
-    --chart-4: oklch(0.371 0 0);
-    --chart-5: oklch(0.269 0 0);
-    --sidebar: oklch(0.205 0 0);
-    --sidebar-foreground: oklch(0.985 0 0);
-    --sidebar-primary: oklch(0.488 0.243 264.376);
-    --sidebar-primary-foreground: oklch(0.985 0 0);
-    --sidebar-accent: oklch(0.269 0 0);
-    --sidebar-accent-foreground: oklch(0.985 0 0);
-    --sidebar-border: oklch(1 0 0 / 10%);
-    --sidebar-ring: oklch(0.556 0 0);
-  }
-}
-
 @layer base {
   * { @apply border-border outline-ring/50; }
   html { @apply bg-background; }
@@ -160,8 +123,7 @@
 }
 
 body {
-  background-image: radial-gradient(circle at 50% -10%, oklch(1 0 0 / 0.85), transparent 38%), linear-gradient(135deg, oklch(0.95 0.025 88), oklch(0.98 0.01 98));
+  background-color: var(--background);
+  background-image: linear-gradient(var(--border) 1px, transparent 1px);
+  background-size: 100% 32px;
 }
-.ambient { position: absolute; pointer-events: none; border-radius: 999px; filter: blur(2px); opacity: .55; }
-.ambient-one { width: 34rem; height: 34rem; top: 6rem; left: -18rem; background: radial-gradient(circle, oklch(0.78 0.12 78 / .24), transparent 68%); }
-.ambient-two { width: 30rem; height: 30rem; top: 24rem; right: -15rem; background: radial-gradient(circle, oklch(0.55 0.08 245 / .13), transparent 70%); }

@@ -4,7 +4,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'ÉOQHÁ · Jornada de caráter',
-  description: 'Uma experiência interativa de estudo do Salmo 14 para aprimorar o aprendizado e formar o caráter.',
+  description: 'Uma experiência interativa de estudo do Salmo 21 para aprimorar o aprendizado e formar o caráter.',
   generator: 'v0.app',
   icons: {
     icon: [
